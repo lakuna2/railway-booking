@@ -1,12 +1,10 @@
 const express = require('express');
-// const userController = require('../controllers/userController');
+const bookingController = require('../controllers');
 const router = express.Router();
 
 // get all booking
-router.get('/booking', (req, res) => {
-    console.log('masuk ke path /');
+router.get('/booking', bookingController.getBooking);
 
-    res.json({ name: 'OK'});
-})
-
-module.exports = router;
+module.exports = {
+    router
+    };

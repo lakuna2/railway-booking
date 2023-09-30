@@ -18,7 +18,12 @@ app.use((req, res, next) => {
     console.log(`Method: ${req.method} ${req.path}`);
     next();
 });
-routes.forEach((route) => app.use(route));
+
+
+app.use(routes.bookingRoutes.router);
+
+// routes.forEach((route) => app.use(route));
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
