@@ -1,7 +1,8 @@
+const {bookingService} = require('../services')
 async function getBooking(res,res) {
-    console.log('masuk ke path /');
+    const booking = await bookingService.getAllBooking();
 
-    res.json({ name: 'OK'});
+    res.status(200).json(booking);
 };
 
 module.exports = {
