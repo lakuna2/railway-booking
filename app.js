@@ -22,6 +22,7 @@ app.use((req, res, next) => {
 
 app.use(routes.bookingRoutes.router);
 
+
 // routes.forEach((route) => app.use(route));
 
 

@@ -9,6 +9,7 @@ async function getBooking(req,res) {
 
 async function createBooking(req,res) {
     const booking = req.body;
+    console.log("body", booking)
 
     const createdBooking = await bookingService.createBooking(booking);
 
