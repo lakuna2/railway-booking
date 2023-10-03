@@ -19,7 +19,8 @@ async function getAllBooking() {
 
 }
 async function createBooking(booking) {
-    console.log("booking", booking)
+    // console.log("booking", booking)
+    const date = new Date();
 
     try {
         const createdBooking = await prisma.booking.create({
@@ -29,10 +30,9 @@ async function createBooking(booking) {
                 phone: booking.phone,
                 service: booking.service,
                 doctor: booking.doctor,
-                reservationdate: booking.reservationdate,
-                reservationtime: booking.reservationtime
+                reservationdate: date (booking.reservationdate),
+                reservationtime: date (booking.reservationtime)
             }
-            
         });
         
         return createdBooking
