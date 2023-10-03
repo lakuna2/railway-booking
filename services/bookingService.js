@@ -19,7 +19,7 @@ async function getAllBooking() {
 
 }
 async function createBooking(booking) {
-    // console.log("booking", booking)
+
     const date = new Date();
 
     try {
@@ -30,11 +30,10 @@ async function createBooking(booking) {
                 phone: booking.phone,
                 service: booking.service,
                 doctor: booking.doctor,
-                reservationdate: date (booking.reservationdate),
-                reservationtime: date (booking.reservationtime)
+                reservationdate: date,
+                reservationtime: booking.reservationtime
             }
         });
-        
         return createdBooking
     } catch (error) {
         console.error("Terjadi kesalahan:", error);
